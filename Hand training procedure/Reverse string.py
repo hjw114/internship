@@ -1,0 +1,5 @@
+Str1=input("请输入字符串:")
+Str2=list(Str1)
+Str2.reverse()
+Str=''.join(Str2)
+print(Str)
