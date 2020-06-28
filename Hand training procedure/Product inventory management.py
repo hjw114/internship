@@ -32,7 +32,7 @@ class Stock(object):#库存类
         print('总计：产品总数：%s 产品总价：%s' % (n, c))
 
 
-
+#测试
 a=Stock()
 b=Product(10,123456,100,"apple")
 a.add(b)
