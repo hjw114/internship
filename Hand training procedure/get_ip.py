@@ -4,7 +4,7 @@ def get_ip_info(ip):
               r = requests.get('http://ip.taobao.com/service/getIpInfo.php?ip=%s' %ip)              
               if  r.json()['code'] == 0 :
                             i = r.json()['data']
-                            country = i['country']  #国家 
+                            country = i['country']  #国家
                             area = i['area']        #区域
                             region = i['region']    #地区
                             city = i['city']        #城市
