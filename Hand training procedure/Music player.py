@@ -1,7 +1,6 @@
 import pygame
 import sys
 import os
-import string
 class button:#按钮属性
     def __init__(self,screen,msg,x,y,t):
         self.screen=screen
