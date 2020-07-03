@@ -174,11 +174,8 @@ class Crawler_novel(object):
 # 主程序
 if __name__=='__main__':
      while True:
-          choice = input("(0) 网页抓取  (1) 爬取贴吧图片  (2) 爬取小说    Please input your choice(0/1/2): ")
+          choice = input("(0) 网页抓取  (1) 爬取贴吧图片  (2) 爬取小说  (3)退出  Please input your choice(0/1/2): ")
           url = input("请输入需要处理的网站网址：(目前不提供手动输入，采用默认)")
-          if choice not in '0123':
-               print("Invalid input, Try again.")
-               continue
 
           if choice in '0':
                start_url = "http://www.baidu.com/"
@@ -187,7 +184,6 @@ if __name__=='__main__':
                continue
 
           elif choice in '1':
-
                start_url = "https://tieba.baidu.com/p/3910085328"  # 被爬取的帖子网址
                if not os.path.exists('E:\pic'):  # 看是否有该文件夹，没有则创建文件夹
                     os.mkdir('E:\pic')
@@ -201,7 +197,11 @@ if __name__=='__main__':
                dl.run()
                continue
 
+          elif choice in '3':
+               break;
+          
           else:
-               break
+               print("Invalid input, Try again.")
+               continue
 
 

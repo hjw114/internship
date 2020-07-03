@@ -51,10 +51,6 @@ def show_menu():
     while True:
         choice = input("(0) save money  (1) spend money  (2) query detail  (3) quit  Please input your choice(0/1/2/3):")
 
-        if choice not in '0123':
-            print("Invalid input, Try again.")
-            continue
-
         if choice in '0':
             amount = int(input("Amount: "))
             comment = input("Comment: ")
@@ -70,9 +66,13 @@ def show_menu():
         elif choice in '2':
             query_money(w_file, r_file)
             continue
-
-        else:
+        
+        elif choice in '3':
             break
+        
+        else:
+            print("Invalid input, Try again.")
+            continue
 
 
 
