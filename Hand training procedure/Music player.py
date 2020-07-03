@@ -35,9 +35,6 @@ def printScale(text,P):#调节音量
         pygame.mixer.music.set_volume(u + t)
     else:
         pygame.mixer.music.set_volume(u - t)
-def FONT(size):#调节字体大小
-    t=int(size)
-    return pygame.font.SysFont('microsoft Yahei', t)
 def mousposition():#获取鼠标位置
     return pygame.mouse.get_pos()
 def mousepress(x,y,i,t):#判断是否点击
