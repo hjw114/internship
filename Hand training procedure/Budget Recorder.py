@@ -49,25 +49,28 @@ def show_menu():
             json.dump('',fobj)
 
     while True:
-        choice = input("(0) save money  (1) spend money  (2) query detail  (3) quit  Please input your choice(0/1/2/3):")
+        choice = input("(0) quit  (1) save money  (2) spend money  (3) query detail    Please input your choice(0/1/2/3):")
+        if choice in '':
+            print("崩溃了，求求你输入点东西")
+            continue
 
-        if choice in '0':
+        if choice in '1':
             amount = int(input("Amount: "))
             comment = input("Comment: ")
             save_money(w_file, r_file, amount, comment)
             continue
 
-        elif choice in '1':
+        elif choice in '2':
             amount = int(input("Amount: "))
             comment = input("Comment: ")
             cost_money(w_file, r_file, amount, comment)
             continue
 
-        elif choice in '2':
+        elif choice in '3':
             query_money(w_file, r_file)
             continue
         
-        elif choice in '3':
+        elif choice in '0':
             break
         
         else:
