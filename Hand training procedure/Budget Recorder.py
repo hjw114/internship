@@ -61,17 +61,17 @@ def show_menu():
             save_money(w_file, r_file, amount, comment)
             continue
 
-        if choice in '1':
+        elif choice in '1':
             amount = int(input("Amount: "))
             comment = input("Comment: ")
             cost_money(w_file, r_file, amount, comment)
             continue
 
-        if choice in '2':
+        elif choice in '2':
             query_money(w_file, r_file)
             continue
 
-        if choice == '3':
+        else:
             break
 
 
