@@ -110,10 +110,11 @@ class Crawler_novel(object):
 
      def get_download_url(self):
           req = requests.get(url = self.target)
+          req.encoding = 'GB2312'
           html = req.text
-          div_bf = BeautifulSoup(html)
+          div_bf = BeautifulSoup(html, features = "lxml")
           div = div_bf.find_all('div', class_='listmain')
-          a_bf = BeautifulSoup(str(div[0]))
+          a_bf = BeautifulSoup(str(div[0]),  features = "lxml")
           a = a_bf.find_all('a')
           self.nums = len(a[15:])  # 剔除不必要的章节，并统计章节数
           for each in a[15:]:
@@ -132,8 +133,9 @@ class Crawler_novel(object):
 
      def get_contents(self, target):
           req = requests.get(url = target)
+          req.encoding = 'GB2312'
           html = req.text
-          bf = BeautifulSoup(html)
+          bf = BeautifulSoup(html, features = "lxml")
           texts = bf.find_all('div', class_ = 'showtxt')
           texts = texts[0].text.replace('\xa0' * 8, '\n\n')
           return texts
@@ -152,7 +154,7 @@ class Crawler_novel(object):
 
      def writer(self, name, path, text):
           write_flag = True
-          with open(path, 'a', encoding='utf-8') as f:
+          with open(path, 'a', encoding = 'UTF-8') as f:
                f.write(name + '\n')
                f.writelines(text)
                f.write('\n\n')
