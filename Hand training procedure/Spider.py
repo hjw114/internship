@@ -170,17 +170,16 @@ class Crawler_novel(object):
 
 
 
-
 # 主程序
 if __name__=='__main__':
      while True:
           choice = input("(0) 网页抓取  (1) 爬取贴吧图片  (2) 爬取小说  (3)退出  Please input your choice(0/1/2): ")
 
           if choice in '':
-               print("崩溃了，求求你输入点东西")
+               print("求求你输入选项")
                continue
 
-          url = input("请输入需要处理的网站网址：(目前不提供手动输入，采用默认)")
+          url = input("请输入需要处理的网站网址：(目前版本为实例版本，不提供手动输入，采用默认，有需要可以去代码里改)")
 
           if choice in '0':
                start_url = "http://www.baidu.com/"

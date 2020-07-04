@@ -56,6 +56,7 @@ def make_captcha():
     image.save("验证码.png")
 
 
-
 # 主函数
-make_captcha()
+if __name__ == '__main__':
+    make_captcha()
+    print("验证码图片已生成在程序当前运行目录下")
