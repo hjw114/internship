@@ -1,0 +1,45 @@
+score=100
+print("位面第一公司笔试题，总分100分，加油！")
+print("第一题：")
+print("北京占地面积最大的大学是哪个？")
+answer=input("四个字母，大写：")
+if(answer=="BJFU"):
+    print("恭喜答对！")
+else:
+    print("你学锤子呢？听说过鹫峰末？")
+    score=score-10
+print("第二题：")
+print("本公司战略工作地点在哪？")
+answer=input("基础楼，通宵，学习，三个数字：")
+if(answer=="304"):
+    print("恭喜答对！")
+else:
+    print("不知道情有可原，但是记得通宵就行")
+    score=score-10
+print("第三题：")
+print("1+1=？")
+answer=input("就这？还要提示？：")
+if(answer=="2"):
+    print("恭喜答对！")
+else:
+    print("¿兄弟凭什么学会使用git的？")
+    score=score-10
+print("第四题：")
+print("1+1=？")
+answer=input("再给你一次机会：")
+if(answer=="2"):
+    print("恭喜答对！")
+else:
+    print("哎。。我都不知道该说什么了。。")
+    score=score-10
+print("第五题：")
+print("世界上最帅的人是谁？")
+answer=input("三个字母，公司内：")
+if(answer=="hjw"):
+    print("恭喜答对！不多bb先恭喜过了第一轮笔试！")
+else:
+    print("就这？tcl，可以退学了兄弟，提前抬走")
+    score=score-60
+print("最终得分是：")
+print(score)
+print("自己反思反思吧，懂的都懂")
